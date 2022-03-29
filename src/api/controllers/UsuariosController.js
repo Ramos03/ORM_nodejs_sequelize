@@ -31,7 +31,17 @@ class UsuariosController {
     static async inserirUsuario(req, res) {
         try {
             const novoUsuario = req.body;
-            
+
+            const usuario = await database.Usuarios.findOne({
+                where: {
+                    email: String(novoUsuario.email)
+                }
+            });
+
+            if(usuario){
+                return res.status(400).send({message: "Usuário já existe!"});
+            }
+
             const novoUsuarioCriado = await database.Usuarios.create(novoUsuario);
 
             return res.status(201).json(novoUsuarioCriado);

@@ -12,10 +12,10 @@ router.get('/api/usuarios/:idUsuario', verifyJWT, UsuariosController.buscarUsuar
 router.put('/api/usuarios/:idUsuario', verifyJWT, UsuariosController.atualizarUsuario);
 router.delete('/api/usuarios/:idUsuario', verifyJWT, UsuariosController.deletarUsuario);
 
-router.get('/api/usuarios/:idUsuario/produto/', verifyJWT, ProdutosController.buscarTodosProdutos);
-router.get('/api/usuarios/:idUsuario/produto/:idProduto', verifyJWT, ProdutosController.buscarProduto);
-router.post('/api/usuarios/:idUsuario/produto/', verifyJWT, ProdutosController.inserirProduto);
-router.put('/api/usuarios/:idUsuario/produto/:idProduto', verifyJWT, ProdutosController.atualizarProduto);
-router.delete('/api/usuarios/:idUsuario/produto/:idProduto', verifyJWT, ProdutosController.deletarProduto);
+router.get('/api/usuarios/produto/', verifyJWT, ProdutosController.buscarTodosProdutos);
+router.get('/api/usuarios/produto/:idProduto', verifyJWT, ProdutosController.buscarProduto);
+router.post('/api/usuarios/produto/', verifyJWT, ProdutosController.inserirProduto);
+router.put('/api/usuarios/produto/:idProduto', verifyJWT, ProdutosController.atualizarProduto);
+router.delete('/api/usuarios/produto/:idProduto', verifyJWT, ProdutosController.deletarProduto);
 
 module.exports = router;

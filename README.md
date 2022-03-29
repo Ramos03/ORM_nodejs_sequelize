@@ -31,7 +31,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 }
 ```
 
-### Exemplo de consumo da Endpoint /api/usuarios/:idUsuario/produtos (POST)
+### Exemplo de consumo da Endpoint /api/usuarios/produtos (POST)
 ```bash
 {
 	"titulo" : "Iphone 12",
@@ -42,7 +42,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 ```
 
 
-### Exemplo de consumo da Endpoint /api/usuarios/:idUsuario/produtos/:idProduto (PUT)
+### Exemplo de consumo da Endpoint /api/usuarios/produtos/:idProduto (PUT)
 ```bash
 {
 	"titulo" : "Iphone 12",
